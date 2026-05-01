@@ -1,0 +1,211 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: transparent; }
+.wrapper { padding: 8px 0 24px; font-family: var(--font-sans); }
+.channel-label { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: .04em; text-transform: uppercase; margin-bottom: 14px; }
+.pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+.pillar { border-radius: 12px; padding: 14px 16px; border: 0.5px solid; }
+.pillar-title { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+.pillar-sub { font-size: 12px; line-height: 1.5; }
+
+.p-purple { background: #EEEDFE; border-color: #AFA9EC; }
+.p-purple .pillar-title { color: #3C3489; }
+.p-purple .pillar-sub { color: #534AB7; }
+
+.p-teal { background: #E1F5EE; border-color: #5DCAA5; }
+.p-teal .pillar-title { color: #085041; }
+.p-teal .pillar-sub { color: #0F6E56; }
+
+.p-amber { background: #FAEEDA; border-color: #EF9F27; }
+.p-amber .pillar-title { color: #633806; }
+.p-amber .pillar-sub { color: #854F0B; }
+
+.p-coral { background: #FAECE7; border-color: #F0997B; }
+.p-coral .pillar-title { color: #4A1B0C; }
+.p-coral .pillar-sub { color: #993C1D; }
+
+.p-blue { background: #E6F1FB; border-color: #85B7EB; }
+.p-blue .pillar-title { color: #0C447C; }
+.p-blue .pillar-sub { color: #185FA5; }
+
+.p-pink { background: #FBEAF0; border-color: #ED93B1; }
+.p-pink .pillar-title { color: #4B1528; }
+.p-pink .pillar-sub { color: #993556; }
+
+@media (prefers-color-scheme: dark) {
+  .p-purple { background: #26215C; border-color: #534AB7; }
+  .p-purple .pillar-title { color: #CECBF6; }
+  .p-purple .pillar-sub { color: #AFA9EC; }
+  .p-teal { background: #04342C; border-color: #1D9E75; }
+  .p-teal .pillar-title { color: #9FE1CB; }
+  .p-teal .pillar-sub { color: #5DCAA5; }
+  .p-amber { background: #412402; border-color: #BA7517; }
+  .p-amber .pillar-title { color: #FAC775; }
+  .p-amber .pillar-sub { color: #EF9F27; }
+  .p-coral { background: #4A1B0C; border-color: #D85A30; }
+  .p-coral .pillar-title { color: #F5C4B3; }
+  .p-coral .pillar-sub { color: #F0997B; }
+  .p-blue { background: #042C53; border-color: #378ADD; }
+  .p-blue .pillar-title { color: #B5D4F4; }
+  .p-blue .pillar-sub { color: #85B7EB; }
+  .p-pink { background: #4B1528; border-color: #D4537E; }
+  .p-pink .pillar-title { color: #F4C0D1; }
+  .p-pink .pillar-sub { color: #ED93B1; }
+}
+
+.section-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: .04em; margin: 18px 0 10px; }
+.ideas-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 6px; }
+.idea-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: 10px; padding: 11px 13px; cursor: pointer; transition: border-color .15s; }
+.idea-card:hover { border-color: var(--color-border-primary); }
+.idea-tag { display: inline-block; font-size: 10px; font-weight: 500; border-radius: 4px; padding: 2px 6px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .03em; }
+.tag-purple { background: #EEEDFE; color: #3C3489; }
+.tag-teal { background: #E1F5EE; color: #085041; }
+.tag-amber { background: #FAEEDA; color: #633806; }
+.tag-coral { background: #FAECE7; color: #4A1B0C; }
+.tag-blue { background: #E6F1FB; color: #0C447C; }
+.tag-pink { background: #FBEAF0; color: #4B1528; }
+@media (prefers-color-scheme: dark) {
+  .tag-purple { background: #26215C; color: #CECBF6; }
+  .tag-teal { background: #04342C; color: #9FE1CB; }
+  .tag-amber { background: #412402; color: #FAC775; }
+  .tag-coral { background: #4A1B0C; color: #F5C4B3; }
+  .tag-blue { background: #042C53; color: #B5D4F4; }
+  .tag-pink { background: #4B1528; color: #F4C0D1; }
+}
+.idea-text { font-size: 12px; color: var(--color-text-primary); line-height: 1.45; font-weight: 500; }
+
+.side-label { font-size: 11px; color: var(--color-text-tertiary); margin-top: 10px; }
+.divider { height: 0.5px; background: var(--color-border-tertiary); margin: 20px 0; }
+</style>
+
+<div class="wrapper">
+  <div class="channel-label">Your channel positioning</div>
+  <div style="font-size:16px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px">Creative Entrepreneur — Creativity × Business × Human Behaviour</div>
+  <div style="font-size:13px;color:var(--color-text-secondary);margin-bottom:20px">Story-driven. Visually stunning. Genuinely useful. Built for a massive audience.</div>
+
+  <div class="channel-label">Your 6 content pillars</div>
+  <div class="pillars">
+    <div class="pillar p-purple">
+      <div class="pillar-title">Visual Psychology & Branding</div>
+      <div class="pillar-sub">Why certain visuals, brands and ads work psychologically. You decode them.</div>
+    </div>
+    <div class="pillar p-teal">
+      <div class="pillar-title">Creativity & How Creative Minds Work</div>
+      <div class="pillar-sub">Psychology of creativity, how artists think, the dark side of being highly creative.</div>
+    </div>
+    <div class="pillar p-amber">
+      <div class="pillar-title">Future of Creativity & AI</div>
+      <div class="pillar-sub">How AI, creativity and business are colliding. You're the voice of where this is heading.</div>
+    </div>
+    <div class="pillar p-coral">
+      <div class="pillar-title">Business & Productivity for Creatives</div>
+      <div class="pillar-sub">How creatives make money, build agencies, kill bad habits and grow their careers.</div>
+    </div>
+    <div class="pillar p-blue">
+      <div class="pillar-title">Historical & Business Storytelling</div>
+      <div class="pillar-sub">How great brands, empires and decisions shaped the world — cinematic and story-led.</div>
+    </div>
+    <div class="pillar p-pink">
+      <div class="pillar-title">Personal Branding & Content Creation</div>
+      <div class="pillar-sub">What makes content work, why personal brands win, how to build one from zero.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Core video ideas — main pillars</div>
+  <div class="ideas-grid">
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: Why motion graphics is the most underrated business skill')">
+      <span class="idea-tag tag-purple">Visual psychology</span>
+      <div class="idea-text">Why motion graphics is the most underrated business skill</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: I analyzed 100 viral ads — here is the exact formula they all use')">
+      <span class="idea-tag tag-purple">Visual psychology</span>
+      <div class="idea-text">I analyzed 100 viral ads — here is the exact formula they all use</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: The visual trick every big brand uses to make you trust them')">
+      <span class="idea-tag tag-purple">Visual psychology</span>
+      <div class="idea-text">The visual trick every big brand uses to make you trust them</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: Why creative people struggle in normal life — the science behind it')">
+      <span class="idea-tag tag-teal">Creative mind</span>
+      <div class="idea-text">Why creative people struggle in normal life — the science behind it</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: The dark side of being a highly creative person')">
+      <span class="idea-tag tag-teal">Creative mind</span>
+      <div class="idea-text">The dark side of being a highly creative person</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: How your brain sees colour differently than you think')">
+      <span class="idea-tag tag-teal">Creative mind</span>
+      <div class="idea-text">How your brain sees colour differently than you think</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: AI is replacing designers — but not the ones who do this')">
+      <span class="idea-tag tag-amber">Future & AI</span>
+      <div class="idea-text">AI is replacing designers — but not the ones who do this</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: Why creative direction is the most valuable skill in the next 10 years')">
+      <span class="idea-tag tag-amber">Future & AI</span>
+      <div class="idea-text">Why creative direction is the most valuable skill in the next 10 years</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: How a 20-year-old creative can out-earn a corporate director')">
+      <span class="idea-tag tag-amber">Future & AI</span>
+      <div class="idea-text">How a 20-year-old creative can out-earn a corporate director</div>
+    </div>
+  </div>
+
+  <div class="ideas-grid" style="margin-top:8px">
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: 5 habits quietly killing your most productive hours')">
+      <span class="idea-tag tag-coral">Business & productivity</span>
+      <div class="idea-text">5 habits quietly killing your most productive hours</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: Why most creative agencies fail in their first year')">
+      <span class="idea-tag tag-coral">Business & productivity</span>
+      <div class="idea-text">Why most creative agencies fail in their first year</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: How I would build a content agency with zero money')">
+      <span class="idea-tag tag-coral">Business & productivity</span>
+      <div class="idea-text">How I would build a content agency with zero money</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: Why personal brands are beating every traditional business right now')">
+      <span class="idea-tag tag-pink">Personal branding</span>
+      <div class="idea-text">Why personal brands are beating every traditional business right now</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: What exactly makes a piece of content go viral — the real formula')">
+      <span class="idea-tag tag-pink">Personal branding</span>
+      <div class="idea-text">What exactly makes a piece of content go viral — the real formula</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: Why cheap-looking content is silently killing your business')">
+      <span class="idea-tag tag-pink">Personal branding</span>
+      <div class="idea-text">Why cheap-looking content is silently killing your business</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="section-title">Side topic — historical & business storytelling (inspired by Khalid Farhan style)</div>
+  <div class="ideas-grid">
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: How one logo change destroyed a billion dollar brand')">
+      <span class="idea-tag tag-blue">Historical</span>
+      <div class="idea-text">How one logo change destroyed a billion dollar brand</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: The creative genius behind Apple 1984 ad — and why nothing matched it since')">
+      <span class="idea-tag tag-blue">Historical</span>
+      <div class="idea-text">The creative genius behind Apple's 1984 ad — why nothing matched it since</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: How WW2 propaganda secretly shaped modern advertising')">
+      <span class="idea-tag tag-blue">Historical</span>
+      <div class="idea-text">How WW2 propaganda secretly shaped modern advertising</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: The untold story of how Nike ads actually work psychologically')">
+      <span class="idea-tag tag-blue">Historical</span>
+      <div class="idea-text">The untold story of how Nike's ads actually work psychologically</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: How a failing brand redesigned their logo and went from 2M to 200M')">
+      <span class="idea-tag tag-blue">Historical</span>
+      <div class="idea-text">How a failing brand redesigned and went from $2M to $200M</div>
+    </div>
+    <div class="idea-card" onclick="sendPrompt('Help me make a full video script for: The city that was designed to control human behaviour')">
+      <span class="idea-tag tag-blue">Historical</span>
+      <div class="idea-text">The city that was designed to control human behaviour</div>
+    </div>
+  </div>
+  <div class="side-label">Click any card to instantly generate a full script for that video</div>
+</div>
